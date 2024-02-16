@@ -55,15 +55,16 @@ a:hover{
     overflow-y: scroll;
 }
 #box1{
+    position: relative;
     display: grid;
     grid-template-columns: 1.5fr 1.5fr 1fr 1.5fr 1fr 7fr 4fr;
     background-color: #151515;
 }
 #nav6{
-    top:2.25%;
+    position: absolute;
+    top:20%;
     left: 50%;
     transform: translateX(-50%);
-    position: fixed;
 }
 #box4{
     overflow-y:scroll ;
