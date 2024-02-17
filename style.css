@@ -60,11 +60,24 @@ a:hover{
     grid-template-columns: 1.5fr 1.5fr 1fr 1.5fr 1fr 7fr 4fr;
     background-color: #151515;
 }
+#nav5{
+    position: relative;
+    margin-left:5%;
+}
+#prob{
+    position: fixed;
+}
 #nav6{
-    position: absolute;
-    top:20%;
+    position: relative;
+    /* top:20%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(-50%); */
+}
+.logo{
+    position: absolute;
+    left: 30%;
+    height: 80%;
+    transform: translateX(-50%) ;
 }
 #box4{
     overflow-y:scroll ;
@@ -88,3 +101,12 @@ li{
     justify-content: center;
     align-items: center;
 }
+@media (orientation: portrait) {
+    body {
+      transform: rotate(90deg);
+      transform-origin: top left;
+      width: 100vh;
+      height: 100vw;
+      overflow-x: hidden; /* Optional: Hide horizontal scrollbar */
+    }
+  }
