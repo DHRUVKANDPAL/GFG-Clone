@@ -73,4 +73,28 @@
         </div>
     </div>
 </body>
+    <script>
+    function lockOrientation() {
+      // Check if the Screen Orientation API is supported
+      if (screen.orientation && screen.orientation.lock) {
+        screen.orientation.lock("landscape").then(
+          function success() {
+            console.log("Screen orientation locked to landscape.");
+          },
+          function error(err) {
+            console.error("Could not lock screen orientation: ", err);
+          }
+        );
+      } else if (screen.lockOrientation) {
+        // Check if the deprecated method is supported
+        screen.lockOrientation("landscape");
+        console.log("Screen orientation locked to landscape.");
+      } else {
+        console.warn("Screen orientation API not supported on this browser.");
+      }
+    }
+  
+    // Call the function to lock the orientation when the page loads
+    lockOrientation();
+  </script>
 </html>
